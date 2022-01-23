@@ -1,6 +1,6 @@
 JAVAC=javac
 JAVA=java
-CLASS_PATH=bin:jars/gson-2.8.9.jar:jars/log4j-1.2-api-2.17.1.jar:jars/log4j-api-2.17.1.jar:jars/log4j-core-2.17.1.jar
+CLASS_PATH=bin:jars/gson-2.8.9.jar:jars/log4j-api-2.17.1.jar:jars/log4j-core-2.17.1.jar
 
 all: bin/Main.class bin/Assignment1Test.class
 
@@ -28,10 +28,13 @@ bin/poker/Card.class:src/Card.java
                  -cp ${CLASS_PATH} \
                  ./src/Card.java
 
+bin/log4j2.xml:src/log4j2.xml
+	cp src/log4j2.xml bin/log4j2.xml
+
 .PHONY:run_tests
 .PHONY:run_main
 
-run_tests: all
+run_tests: all bin/log4j2.xml
 	${JAVA} -jar jars/junit-platform-console-standalone-1.8.2.jar \
                 -cp ${CLASS_PATH} \
                 -c Assignment1Test

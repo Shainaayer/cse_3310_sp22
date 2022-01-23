@@ -11,7 +11,6 @@ import poker.Card;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-//import org.junit.BeforeClass;
 
 class Assignment1Test 
 {
@@ -19,19 +18,24 @@ class Assignment1Test
     private final String four_5s = "{'cards':[{'suite':'SPADES','value':'FIVE'},{'suite':'DIAMONDS','value':'FIVE'},{'suite':'CLUBS','value':'FIVE'},{'suite':'HEARTS','value':'FIVE'},{'suite':'SPADES','value':'ACE'}]}";
     private final String three_5s = "{'cards':[{'suite':'SPADES','value':'FOUR'},{'suite':'DIAMONDS','value':'FIVE'},{'suite':'CLUBS','value':'FIVE'},{'suite':'HEARTS','value':'FIVE'},{'suite':'SPADES','value':'ACE'}]}";
 
+
     private static final Logger LOGGER = LogManager.getLogger(Assignment1Test.class);
-
-    public void sayHello() {
-
-        LOGGER.info("Keyboard not responding. Press any key to continue...");
-        LOGGER.warn("Congratulations, you are pregnant!");
-        LOGGER.debug("Congratulations, you are pregnant!");
-    }
 
     
     @Test
     void four_of_a_kind_better_then_3_of_a_kind() 
     {
+
+
+        // Use the logger to see what is happening 
+        // with a test when it fails.  it is writen
+        // to a log file.
+
+        LOGGER.debug(" in the 4 of a kind test");
+
+
+
+
         // turn it into json
         Gson gson = new Gson();
 
