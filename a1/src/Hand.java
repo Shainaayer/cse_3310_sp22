@@ -2,32 +2,17 @@ package poker;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
+import poker.Card;
 
 public class Hand
 {
-    public enum Suite
-    {
-       HEARTS,CLUBS,DIAMONS,SPADES
-    }
+    //private transient int i=10;
+    // marked transient they will not serialized / deserialized
 
-    public enum Value
-    {
-       ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,
-       TEN,JACK,QUEEN,KING 
-    }
+    public Card[] cards;
 
-    private class Card
+    public Hand()
     {
-       Suite suite;
-       Value value;
-    }
-  
-    Card[] cards;
-    
-    public Hand(String s)
-    {
-        System.out.println("in the Hand constructor");
     }
 
     public boolean is_better_than(Hand H)
