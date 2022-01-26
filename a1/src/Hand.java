@@ -19,4 +19,9 @@ public class Hand
     {
         return false;
     }
+   
+   public boolean is_equal(Hand H)
+   {
+       return false;
+   }
 }
