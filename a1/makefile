@@ -2,7 +2,7 @@ JAVAC=javac
 JAVA=java
 CLASS_PATH=bin:jars/gson-2.8.9.jar:jars/log4j-api-2.17.1.jar:jars/log4j-core-2.17.1.jar
 
-all: bin/Main.class bin/Assignment1Test.class
+all: bin/Main.class bin/Assignment1Test.class bin/GradingTest.class 
 
 bin/Main.class:src/Main.java bin/poker/Hand.class 
 	$(shell mkdir -p bin)
@@ -15,6 +15,12 @@ bin/Assignment1Test.class:src/Assignment1Test.java ./bin/poker/Hand.class
 	${JAVAC} -d bin \
                  -cp ${CLASS_PATH}:jars/junit-platform-console-standalone-1.8.2.jar \
                  ./src/Assignment1Test.java
+
+bin/GradingTest.class:src/GradingTest.java ./bin/poker/Hand.class
+	$(shell mkdir -p bin)
+	${JAVAC} -d bin \
+                 -cp ${CLASS_PATH}:jars/junit-platform-console-standalone-1.8.2.jar \
+                 ./src/GradingTest.java
 
 bin/poker/Hand.class:src/Hand.java ./bin/poker/Card.class
 	$(shell mkdir -p bin)
@@ -38,6 +44,9 @@ run_tests: all bin/log4j2.xml
 	${JAVA} -jar jars/junit-platform-console-standalone-1.8.2.jar \
                 -cp ${CLASS_PATH} \
                 -c Assignment1Test
+	${JAVA} -jar jars/junit-platform-console-standalone-1.8.2.jar \
+                -cp ${CLASS_PATH} \
+                -c GradingTest
 
 #log4j-1.2-api-2.17.1.jar  log4j-api-2.17.1.jar 
 
