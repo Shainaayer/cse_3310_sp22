@@ -48,10 +48,10 @@ class GradingTest
         LowRanked.put(RankedHands.TWO_PAIR,         "{'cards':[{'suite':'SPADES','value':'FOUR'},{'suite':'DIAMONDS','value':'FOUR'},{'suite':'CLUBS','value':'FIVE'},{'suite':'HEARTS','value':'FIVE'},{'suite':'SPADES','value':'ACE'}]}");
         LowRanked.put(RankedHands.THREE_OF_A_KIND,  "{'cards':[{'suite':'SPADES','value':'FOUR'},{'suite':'DIAMONDS','value':'FOUR'},{'suite':'CLUBS','value':'FOUR'},{'suite':'HEARTS','value':'FIVE'},{'suite':'SPADES','value':'ACE'}]}");
         LowRanked.put(RankedHands.STRAIGHT,         "{'cards':[{'suite':'SPADES','value':'TWO'},{'suite':'DIAMONDS','value':'THREE'},{'suite':'CLUBS','value':'FOUR'},{'suite':'HEARTS','value':'FIVE'},{'suite':'SPADES','value':'SIX'}]}");
-        LowRanked.put(RankedHands.FLUSH,            "{'cards':[{'suite':'SPADES','value':'KING'},{'suite':'SPADES','value':'SIX'},{'suite':'SPADES','value':'FIVE'},{'suite':'SPADES','value':'TEN'},{'suite':'SPADES','value':'ACE'}]}");
+        LowRanked.put(RankedHands.FLUSH,            "{'cards':[{'suite':'DIAMONDS','value':'TWO'},{'suite':'DIAMONDS','value':'THREE'},{'suite':'DIAMONDS','value':'FIVE'},{'suite':'DIAMONDS','value':'SEVEN'},{'suite':'DIAMONDS','value':'NINE'}]}");
         LowRanked.put(RankedHands.FULL_HOUSE,       "{'cards':[{'suite':'SPADES','value':'SIX'},{'suite':'DIAMONDS','value':'SIX'},{'suite':'CLUBS','value':'SIX'},{'suite':'HEARTS','value':'TEN'},{'suite':'SPADES','value':'TEN'}]}");
         LowRanked.put(RankedHands.FOUR_OF_A_KIND,   "{'cards':[{'suite':'SPADES','value':'THREE'},{'suite':'DIAMONDS','value':'THREE'},{'suite':'CLUBS','value':'THREE'},{'suite':'HEARTS','value':'THREE'},{'suite':'SPADES','value':'ACE'}]}");
-        LowRanked.put(RankedHands.STRAIGHT_FLUSH,   "{'cards':[{'suite':'SPADES','value':'QUEEN'},{'suite':'SPADES','value':'JACK'},{'suite':'SPADES','value':'TEN'},{'suite':'SPADES','value':'NINE'},{'suite':'SPADES','value':'EIGHT'}]}");
+        LowRanked.put(RankedHands.STRAIGHT_FLUSH,   "{'cards':[{'suite':'CLUBS','value':'TEN'},{'suite':'CLUBS','value':'NINE'},{'suite':'CLUBS','value':'EIGHT'},{'suite':'CLUBS','value':'SEVEN'},{'suite':'CLUBS','value':'SIX'}]}");
 
 
         EnumMap<RankedHands,String> HighRanked = new EnumMap<RankedHands,String>(RankedHands.class);
@@ -61,10 +61,11 @@ class GradingTest
         HighRanked.put(RankedHands.TWO_PAIR,         "{'cards':[{'suite':'SPADES','value':'FOUR'},{'suite':'DIAMONDS','value':'FOUR'},{'suite':'CLUBS','value':'SIX'},{'suite':'HEARTS','value':'SIX'},{'suite':'SPADES','value':'ACE'}]}");
         HighRanked.put(RankedHands.THREE_OF_A_KIND,  "{'cards':[{'suite':'SPADES','value':'SIX'},{'suite':'DIAMONDS','value':'SIX'},{'suite':'CLUBS','value':'SIX'},{'suite':'HEARTS','value':'TWO'},{'suite':'SPADES','value':'ACE'}]}");
         HighRanked.put(RankedHands.STRAIGHT,         "{'cards':[{'suite':'SPADES','value':'THREE'},{'suite':'DIAMONDS','value':'FOUR'},{'suite':'CLUBS','value':'FIVE'},{'suite':'HEARTS','value':'SIX'},{'suite':'SPADES','value':'SEVEN'}]}");
-        HighRanked.put(RankedHands.FLUSH,            "{'cards':[{'suite':'DIAMONDS','value':'TWO'},{'suite':'DIAMONDS','value':'THREE'},{'suite':'DIAMONDS','value':'FIVE'},{'suite':'DIAMONDS','value':'SEVEN'},{'suite':'DIAMONDS','value':'NINE'}]}");
+        HighRanked.put(RankedHands.FLUSH,            "{'cards':[{'suite':'SPADES','value':'KING'},{'suite':'SPADES','value':'SIX'},{'suite':'SPADES','value':'FIVE'},{'suite':'SPADES','value':'TEN'},{'suite':'SPADES','value':'ACE'}]}");
         HighRanked.put(RankedHands.FULL_HOUSE,       "{'cards':[{'suite':'SPADES','value':'SEVEN'},{'suite':'DIAMONDS','value':'SEVEN'},{'suite':'CLUBS','value':'SEVEN'},{'suite':'HEARTS','value':'KING'},{'suite':'SPADES','value':'KING'}]}");
         HighRanked.put(RankedHands.FOUR_OF_A_KIND,   "{'cards':[{'suite':'SPADES','value':'FOUR'},{'suite':'DIAMONDS','value':'FOUR'},{'suite':'CLUBS','value':'FOUR'},{'suite':'HEARTS','value':'FOUR'},{'suite':'SPADES','value':'ACE'}]}");
         HighRanked.put(RankedHands.STRAIGHT_FLUSH,   "{'cards':[{'suite':'CLUBS','value':'TEN'},{'suite':'CLUBS','value':'NINE'},{'suite':'CLUBS','value':'EIGHT'},{'suite':'CLUBS','value':'SEVEN'},{'suite':'CLUBS','value':'SIX'}]}");
+        HighRanked.put(RankedHands.STRAIGHT_FLUSH,   "{'cards':[{'suite':'SPADES','value':'QUEEN'},{'suite':'SPADES','value':'JACK'},{'suite':'SPADES','value':'TEN'},{'suite':'SPADES','value':'NINE'},{'suite':'SPADES','value':'EIGHT'}]}");
 
         LOGGER.debug("Test Each Type of Hand against each other"); 
 
